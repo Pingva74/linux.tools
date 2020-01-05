@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #The script to check the status of the HDD.
-#Just run the script and specify the target host with a space, for example: ./disk.helth.sh ssl45
+#Just run the script and specify the target host with a space, for example: ./disk.helth.sh 192.168.0.110
 #The result will be the 3 most important disk integrity settings (HDD only) for each device. If RAW_VALUE 
-#is 0 then there is nothing to worry about. If RAW_VALUE approaches the value of WORST, notify the L2 team,
+#is 0 then there is nothing to worry about. If RAW_VALUE approaches the value of WORST, 
 #perhaps it is time to change the drive.
 #The utility does not work for disks located behind a hardware RAID controller and may not work correctly 
 #with SSD and nvme drives.
