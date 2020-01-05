@@ -22,7 +22,7 @@ ssh $USER@$HOST "lsblk | grep ^sd. | cut -d' ' -f1" > drlist.txt
 
 for drive in $(cat ./drlist.txt ); do
 echo ============================================== $drive =============================================== #> drive.helth.txt
-ssh $USER@$HOST "sudo smartctl -a /dev/$drive | grep -e ATTRIBUTE_NAME -e Reallocated_Sector -e Current_Pending -e Offline_Uncorrectable; DRIVE_TYPE=$(cat /sys/block/sda/queue/rotational)" #>> drive.helth.txt
+ssh $USER@$HOST "sudo smartctl -a /dev/$drive | grep -e ATTRIBUTE_NAME -e Reallocated_Sector -e Current_Pending -e Offline_Uncorrectable" #>> drive.helth.txt
 
 done
-echo $DRIVE_TYPE
+echo =====================================================================================================
